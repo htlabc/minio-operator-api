@@ -1,4 +1,4 @@
-module github.com/htl/minio/operator
+module github.com/htlabc/minio-operator-api
 
 go 1.17
 

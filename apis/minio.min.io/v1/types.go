@@ -15,7 +15,7 @@
 package v1
 
 import (
-	miniov2 "github.com/htl/minio/operator/apis/minio.min.io/v2"
+	miniov2 "github.com/htlabc/minio-operator-api/apis/minio.min.io/v2"
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

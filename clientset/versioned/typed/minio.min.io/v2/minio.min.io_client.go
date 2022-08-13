@@ -19,8 +19,8 @@
 package v2
 
 import (
-	v2 "github.com/htl/minio/operator/apis/minio.min.io/v2"
-	"github.com/htl/minio/operator/clientset/versioned/scheme"
+	v2 "github.com/htlabc/minio-operator-api/apis/minio.min.io/v2"
+	"github.com/htlabc/minio-operator-api/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
