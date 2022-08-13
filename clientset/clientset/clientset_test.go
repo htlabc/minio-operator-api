@@ -24,7 +24,7 @@ func Test_clientset(t *testing.T) {
 
 	fmt.Println(clientset)
 
-	obj, err := clientset.MinioV1().Tenants("minio").Get(context.Background(), "minio-tenant", metav1.GetOptions{})
+	obj, err := clientset.MinioV2().Tenants("minio").Get(context.Background(), "minio-tenant", metav1.GetOptions{})
 	if err != nil {
 		fmt.Println(err)
 	}
