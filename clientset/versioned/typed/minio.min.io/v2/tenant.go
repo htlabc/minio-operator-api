@@ -22,8 +22,8 @@ import (
 	"context"
 	"time"
 
-	v2 "github.com/minio/operator/apis/minio.min.io/v2"
-	scheme "github.com/minio/operator/clientset/versioned/scheme"
+	v2 "github.com/htl/minio/operator/apis/minio.min.io/v2"
+	scheme "github.com/htl/minio/operator/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"

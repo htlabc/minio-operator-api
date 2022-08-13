@@ -22,7 +22,7 @@
 package v1
 
 import (
-	v2 "github.com/minio/operator/apis/minio.min.io/v2"
+	v2 "github.com/htl/minio/operator/apis/minio.min.io/v2"
 	corev1 "k8s.io/api/core/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 )
