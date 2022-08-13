@@ -72,7 +72,7 @@ func (c *tenants) Get(ctx context.Context, name string, options v1.GetOptions) (
 		Resource("tenants").
 		Name(name).
 		VersionedParams(&options, scheme.ParameterCodec).
-		Do(ctx).
+		Do().
 		Into(result)
 	return
 }
@@ -89,7 +89,7 @@ func (c *tenants) List(ctx context.Context, opts v1.ListOptions) (result *v2.Ten
 		Resource("tenants").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
-		Do(ctx).
+		Do().
 		Into(result)
 	return
 }
@@ -106,7 +106,7 @@ func (c *tenants) Watch(ctx context.Context, opts v1.ListOptions) (watch.Interfa
 		Resource("tenants").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
-		Watch(ctx)
+		Watch()
 }
 
 // Create takes the representation of a tenant and creates it.  Returns the server's representation of the tenant, and an error, if there is any.
@@ -117,7 +117,7 @@ func (c *tenants) Create(ctx context.Context, tenant *v2.Tenant, opts v1.CreateO
 		Resource("tenants").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Body(tenant).
-		Do(ctx).
+		Do().
 		Into(result)
 	return
 }
@@ -131,7 +131,7 @@ func (c *tenants) Update(ctx context.Context, tenant *v2.Tenant, opts v1.UpdateO
 		Name(tenant.Name).
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Body(tenant).
-		Do(ctx).
+		Do().
 		Into(result)
 	return
 }
@@ -147,7 +147,7 @@ func (c *tenants) UpdateStatus(ctx context.Context, tenant *v2.Tenant, opts v1.U
 		SubResource("status").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Body(tenant).
-		Do(ctx).
+		Do().
 		Into(result)
 	return
 }
@@ -159,7 +159,7 @@ func (c *tenants) Delete(ctx context.Context, name string, opts v1.DeleteOptions
 		Resource("tenants").
 		Name(name).
 		Body(&opts).
-		Do(ctx).
+		Do().
 		Error()
 }
 
@@ -175,7 +175,7 @@ func (c *tenants) DeleteCollection(ctx context.Context, opts v1.DeleteOptions, l
 		VersionedParams(&listOpts, scheme.ParameterCodec).
 		Timeout(timeout).
 		Body(&opts).
-		Do(ctx).
+		Do().
 		Error()
 }
 
@@ -189,7 +189,7 @@ func (c *tenants) Patch(ctx context.Context, name string, pt types.PatchType, da
 		SubResource(subresources...).
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Body(data).
-		Do(ctx).
+		Do().
 		Into(result)
 	return
 }
